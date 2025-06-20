@@ -11,451 +11,260 @@
 \chapter{Introduction}
 \label{cha:introduction}
 
-\prependtographicspath{{Chapters/Figures/Covers/}}
+\prependtographicspath{{Chapters/Figures/Introduction}}
 
-% epigraph configuration
-\epigraphfontsize{\small\itshape}
-\setlength\epigraphwidth{12.5cm}
-\setlength\epigraphrule{0pt}
+%% Plan:
 
-\includegraphics[width=0.1\linewidth]{NOVAthesisFiles/Images/novathesis-insignia}\hfill
-\includegraphics[width=0.875\linewidth]{NOVAthesisFiles/Images/novathesis-text}
+% Introduction
 
-\noindent This is the \gls{novathesis} \LaTeX\ template \ntindex[Template!]{Version} \novathesisversion\ from   {Template!date}\novathesisdate.
+% - Vagus Nerve Stimulation
 
-\epigraph{
-  This work is licensed under the \href{https://www.latex-project.org/lppl/lppl-1-3c/}{\LaTeX\ Project Public License v1.3c}.
-  To view a copy of this \ntindex[Template!]{license}, visit the \href{https://www.latex-project.org/lppl/}{LaTeX project public license}.
-}
+% - Technological Context
 
-\section{Welcome to the \novathesis\ Template}
-\label{sec:if_you_use_this_template}
+%   - CMOS Scaling
 
-This first Chapter introduces the \gls{novathesis} template and how it is organized. In Chapter~\ref{cha:users_manual} you can find some specific instructions on how to use this template.  Chapter~\ref{cha:a_short_latex_tutorial_with_examples} shows some examples and give some hints on how to write your text. Please read these next Chapters carefully.
+%   - Embedded Feature Extraction
 
-\subsection{Your Time is Precious}
-\label{sub:time_is_money}
+% - Problem Definition
 
-Did you learn how to drive by sitting by the wheel and throwing your car into the road?  Most probably you did take your time \emph{learning the rules} and \emph{practicing} first! Likewise, it is not wise to throw yourself at the task of writing a thesis/dissertation in \LaTeX\ without seriously considering the following \ntindex{recommendation}!
+% - Research Question
 
-\begin{tcolorbox}[colback=green!8]
-  If you are going to spend zillions of hours writing your thesis/dissertation using the \gls{novathesis} \LaTeX\ template (or some other \LaTeX\ template), be wise and spend a couple of hours learning how to use it properly by reading its manual.  And then, be even wiser, and spend a few more hours \href{https://github.com/joaomlourenco/novathesis/wiki\#learning-latex}{learning some \LaTeX}.  I am sure that the time you are investing now will pay itself countless times before you submit your thesis/dissertation.\\\parbox{\linewidth}{\raggedleft---~\emph{João Lourenço}}
-\end{tcolorbox}
 
-\subsection{Recognition}
-\label{sub:recognition}
+\section{Motivation}
+\label{sec:motivation}
 
-\ntindex[Recognition]{}
+\subsection{World Health: Current context}
+\label{subsec:world_health_context}
 
-The \gls{novathesis} template was born in~1996, and what you see now accumulates to many many hundreds (thousands?!) of working hours, unpaid and stolen from family and friends.  This work is available to the community under the \href{LaTeX project public license}{\LaTeX\ Project Public License v1.3c}, which means you are entitled to use it for free and change it at your will.  However, if you decide to use this template to write your thesis/dissertation, \textbf{be fair to the developers} and:
-\begin{enumerate}
-  \item \ntindex[novathesis!Citation]{} Cite the \gls{novathesis} manual~\cite{novathesis-manual} in a place of your choice (e.g., in the \emph{Acknowledgments}) of your thesis/dissertation with “\verb!\cite{novathesis-manual}!” .  If you cite it this way, the correct entry will be added automatically to your bibliography (no need to worry with the necessary BibTeX entry, as it will be added automatically);
-  \item Go to the
-\href{https://github.com/joaomlourenco/novathesis}{\ntindex[GitHub!project web page]{project web page} in GitHub} and give the project a \ntindex[GitHub!stars]{star} (marked with a red ellipse at the top-right in Figure~\ref{fig:github}); and
-  \item Make a \ntindex[donations]{donation} by visiting the \gls{novathesis} project page and clicking in the button marked with a green ellipse at the top-center in Figure~\ref{fig:github}).  Alternatively, just click \href{https://www.paypal.com/donate/?hosted_button_id=8WA8FRVMB78W8}{\fcolorbox{DarkGreen}{gray!15}{\textbf{~HERE~}}} and your browser will be directed to the right page.
-\end{enumerate}
-
-\begin{figure}[htbp]
+\begin{figure}[bp]
     \centering
-    \includegraphics[width=0.5\linewidth]{github1}
-    \caption{The \gls{novathesis} project web page in GitHub.}
-    \label{fig:github}
+    \includegraphics[width=1.0\textwidth]{Chapters/Figures/Introduction/deaths_neuro_mental_disorders.pdf}
+    \caption{a) Yearly number of deaths associated to neurological, mental and chronic obstructive pulmonary diseases (COPD), according to the WHO, b) Discrimination of number of deaths associated to depressive and anxiety disorders relative to other mental disorders. Data retrieved from \cite{https://ghdx.healthdata.org/record/ihme-data/gbd-2021-nervous-system-disorders-1990-2021}}
+    \label{fig:deaths_mental_disorders}
 \end{figure}
 
-\section{The \emph{NOVAthesis} Template}
-\label{sec:a_bit_of_history}
+\par
+The leading cause of illness and disability worldwide are neurological disorders, affecting approximately a third of the world's population \cite{WorldHealthOrg}. Such disabilities can have a profound impact on memory, cognition, personality, movement, and essential physiological mechanisms such as breeding \cite{}. The global trend on the occurrence of neurological disorders such as depression, epileptic seizures and Parkinson's disease has been toward a rapid increase, prevailing, in relevance, alongside other current health epidemics such as cancer and cardiovascular disorders \cite{}. In light of the current world health context, the development of new clinical therapeutic and diagnostic interventions is of utmost importance, allowing safer, more comfortable, and highly effective alternatives to existing medical procedures.
 
-\ntindex[Template]{}
+\par
+Pharmaceuticals remain the traditional approach to the treatment of diseases.
+However, it is well established that the use of commercially available synthesized drugs affects the whole body, often inducing side effects that can lead to a decrease in patient quality of life\cite{Goggins2022, Ji2020}. 
+Moreover, recent pharmacoeconomic studies suggest that the research and 
+development of new Pharmaceuticals costs range from \$161 million and \$4.54 billion, with additional costs of introducing new drugs into the market achieving \$880 million \cite{https://www.nature.com/articles/d41573-024-00130-3, 10.1007/s40273-021-01065-y}. 
+The complexity of the nervous system renders the aforementioned costs to be 
+significantly optimistic \cite{}. The development of drugs capable of tackling 
+neurological diseases efficiently is limited by the available drug delivery methods, 
+especially when delivering pharmaceuticals directly to the brain \cite{}. The semipermeable 
+blood-brain barrier regulates the transfer of chemical compounds between the 
+circulatory and nervous system, rendering existing pharmaceutical drugs quite 
+ineffective. Developing targeted drug delivery systems requires a parallel investment 
+in research and development that can achieve similar investment magnitudes to 
+the ones redirected towards drug development \cite{}. This increase in spending 
+has not produced positive results. While the global spending in new pharmaceutical drugs' research and development (R\&D) has featured an increasing trend for the past 30 years, the same rising trend can be observed in the casualties associated to neurological, mental and chronic obstructive pulmonary disorders (COPD) (Fig. \ref{fig:motivation_who_records}) - suffering a drastic increase during and post-COVID-19 years.
 
-The \gls{novathesis} template was born at the \gls{DI} of  \gls{FCT} of \gls{NOVA}, Portugal.  But the user base grew… initially grew to other Departments of FCT-NOVA, then to other Schools of NOVA, and later to other Schools of other Universities.  Currently more than~25 Schools are natively supported by the \gls{novathesis} template (see Tables~\ref{tab:supported_schools_NOVA University Lisbon}, \ref{tab:supported_schools_University of Lisbon}, \ref{tab:supported_schools_University of Minho}, \ref{tab:supported_schools_Instituto Politécnico de Lisboa}, \ref{tab:supported_schools_Instituto Politécnico de Setúbal}, and \ref{tab:supported_schools_Other Universities/Schools/Degrees}).
+\begin{figure}[bh]
+    \centering
+    \includegraphics[width=1.0\textwidth]{Chapters/Figures/Introduction/r_and_d_spending.pdf}
+    \caption{Yearly global pharmaceutical 
+  drug R\&D spending in US Dollars (\$USD) a) in total b) per capita  \cite{https://github.com/datasets/pharmaceutical-drug-spending}.}
+    \label{fig:r_and_d_spending_worldwide}
+\end{figure}
 
-\newenvironment{ntUniversity}[1]{
-  \renewcommand\tabularxcolumn[1]{m{##1}}% for vertical centering text in X column
-  % \renewcommand\cellgape{\Gape[1cm]}
-  % \setcellgapes{20pt}
-  % \makegapedcells
-  % % \setlength{\extrarowheight}{20pt}
-  % \renewcommand{\arraystretch}{2}
-  \rowcolors{1}{}{GhostWhite}
-    \xltabular{\linewidth}{cX}%
-      \caption{#1's Schools supported by the \gls{novathesis} template\label{tab:supported_schools_#1}}\\
-    \toprule%
-    \rowcolor{Gainsboro}%
-    & \Gape[1.5ex]{\thead[l]{#1}}\\
-    \midrule%
-}{%
-    \bottomrule
-    \endxltabular%
-}
+\par
+The total health-care spending is only projected to grow, leading scientists to believe that pharmaceutical drug R\&D has been, so far, quite ineffective in the task of tackling diseases directly linked to the nervous system \cite{}. While prevention will always be the most affordable and effective method to tackle most diseases, the genetic nature most neurological medical conditions feature remains a challenge that has been most effectively tackled by non-pharmaceutical treatments directly targeting the nervous system of each clinical subject \cite{}.
 
-\makeatletter
-\newtoggle{coverspace}
-\newcommand{\docCover}[1]{%
-  \setlength{\fboxsep}{0pt}%
-  \togglefalse{coverspace}%
-    \Gape[1.5ex]{\begin{mcellbox}[cc]
-    \@for\myi:=#1\do{%
-      \fbox{\colorbox{White}{\includegraphics[align=c,width=1.5cm]{1up/\myi}}}%
-        \ifx\@xfor@nextelement\@nnil
-          % last iteration
-        \else
-          % not last iteration
-          \iftoggle{coverspace}{\togglefalse{coverspace}\\\\[-14pt]}{\toggletrue{coverspace}~}%
-        \fi
-  }%
-    \end{mcellbox}}
-}
-\makeatother
-\newcommand{\schlName}[3]{\textbf{#1} (\href{#3}{#2})}
-\newcommand{\degreeName}[3]{\newline\null\quad • #1 \href{#3}{(#2)}}
+\subsection{Vagus Nerve: A window of opportunity}
+\label{subsec:vagus_nerve}
 
-\begin{ntUniversity}{NOVA University Lisbon}
-  {
-      \docCover{nova-fct-phd-en,nova-fct-msc-en}
-  } &  {
-    \schlName{NOVA School of Science and Technology}{FCT-NOVA}{https://www.fct.unl.pt}
-    \degreeName{All PhD Programs}{PhD}{https://www.fct.unl.pt/en/education/phd-programmes}
-    \degreeName{All MSc Programs}{MSc}{https://www.fct.unl.pt/en/education/master-degrees}
-  }\\
-  {
-      \docCover{nova-fcsh-phd-en,nova-fcsh-msc-en}
-  } &  {
-    \schlName{NOVA School of Social Sciences and Humanities}{FCSH-NOVA}{https://www.fcsh.unl.pt}
-    \degreeName{All PhD Programs}{PhD}{https://www.fcsh.unl.pt/cursos/\#doutoramentos}
-    \degreeName{All MSc Programs}{MSc}{https://www.fcsh.unl.pt/cursos/\#mestrados}
-  }\\
-  {
-      \docCover{nova-ims-phd-en,nova-ims-msc-mmaa-en,%
-                nova-ims-msc-megi-en,nova-ims-msc-mgi-en,%
-                nova-ims-msc-mcsig-en,nova-ims-msc-mgt-en}
-  } &  {
-    \schlName{NOVA Information Management School}{NOVA-IMS}{https://www.novaims.unl.pt}
-    \degreeName{All PhD Programs}{PhD}{https://www.novaims.unl.pt}
-    \degreeName{Master's in Data Science and Advanced Analytics}{MMAA}{https://www.novaims.unl.pt/mdsaa-ba}
-    \degreeName{Master's in in Statistics and Information Management}{MEGI}{https://www.novaims.unl.pt}
-    \degreeName{Master's in Information Management}{MGI}{https://www.novaims.unl.pt}
-    \degreeName{Master's in Geographic Information Systems and Science}{MCSIG}{https://www.novaims.unl.pt/unigis}
-    \degreeName{Master's in Geospatial Technologies}{GeoTech}{https://www.novaims.unl.pt/geotech}
-  }\\
-  {
-      \docCover{nova-ensp-phd-en,nova-ensp-msc-en}
-  } &  {
-    \schlName{National School of Public Heath}{ENSP-NOVA}{https://www.ensp.unl.pt}
-    \degreeName{All PhD Programs}{PhD}{https://www.ensp.unl.pt/courses/phds}
-    \degreeName{All MSc Programs}{MSc}{https://www.ensp.unl.pt/courses/masters}
-  }\\
-  {
-      \docCover{nova-itqb-phd-green-en,nova-itqb-msc-green-en,%
-                nova-itqb-phd-gray-en,nova-itqb-msc-gray-en}
-  } & {
-    \schlName{Instituto de Tecnologia Química e Biológica}{ITQB-NOVA}{https://www.itqb.unl.pt}
-    \degreeName{All PhD Programs}{PhD}{https://www.itqb.unl.pt/education/PhD\%20Programs}
-    \degreeName{All MSc Programs}{MSc}{https://www.itqb.unl.pt/education/masters-courses}
-  }\\
-\end{ntUniversity}
+\par
+The vagus nerve (VN) is the longest cranial nerve in the human body, extending
+from the brainstem to the abdomen through multiple organs such as the heart,
+lungs, stomach and intestines. The VN is responsible for the regulation of the
+parasympathetic nervous system (PNS). Due to its central role on the function of the
+PNS, multiple studies have shown that the VN can be stimulated to offer therapeutic
+procedures to conditions such as blood-pressure (BP) regulation, epileptic seizure
+suppression, mood and apetite control and chronic pulmonary obstructive disease
+(COPD) \cite[*]{Goggins2022, Ji2020, Lescrauwaet2022, Browning2017, Undem2005}. 
+Regarding mood control, vagus nerve stimulation (VNS) has also been shown as a potent intervention to tackle depression, once it offers targetted therapeutic methods modulating the PNS \cite{DepressionVNS}. Epileptic seizure suppression \cite{} and depression and mood control \cite{}, are examples of clinically approved VNS therapeutic procedures that have already underwent clinical trials, and are currently making an impact on the lives of the respective patients. Currently undergoing pre-clinical and clinical trials are the therapeutic applications of blood pressure regulation, appetite control for tackling the obesity epidemic \cite{},  chronic obstructive pulmonary disease \cite{} and Chron's disease \cite{}. 
 
-\begin{ntUniversity}{University of Lisbon}
-  {
-    \docCover{ulisboa-ist-phd-en,ulisboa-ist-msc-en}
-  } & {
-    \schlName{Instituto Superior Técnico}{IST-UL}{https://tecnico.ulisboa.pt}
-    \degreeName{All PhD Programs}{PhD}{https://tecnico.ulisboa.pt/en/education/courses/phd-programmes/}
-    \degreeName{All MSc Programs}{MSc}{https://tecnico.ulisboa.pt/en/education/courses/masters-programmes}
-  }\\
-  {
-    \docCover{ulisboa-fc-phd-en,ulisboa-fc-msc-en}
-  } & {
-    \schlName{Faculdade de Ciências}{FCUL}{https://ciencias.ulisboa.pt}
-    \degreeName{All PhD Programs}{PhD}{https://ciencias.ulisboa.pt/en/educational-offer/}
-    \degreeName{All MSc Programs}{MSc}{https://ciencias.ulisboa.pt/en/educational-offer/}
-  }\\
-  {
-    \docCover{ulisboa-fmv-phd-en,ulisboa-fmv-msc-en}
-  } & {
-    \schlName{Faculdade de Medicina Veterinária}{FMV-UL}{https://www.fmv.ulisboa.pt}
-    \degreeName{All PhD Programs}{PhD}{https://www.fmv.ulisboa.pt/en/study/phd}
-    \degreeName{All MSc Programs}{MSc}{https://www.fmv.ulisboa.pt/pt/ensino/mestrados}
-  }\\
-\end{ntUniversity}
+\par
+Neuromodulation-based therapeutic treatments have emerged as a promising method 
+for tackling neurological disorders. Stimulation and suppression of neurological circuits by, respectively, activating or inhibiting neuronal activity enable the modulation of physiological and neurological functions \cite{Fomenko2018,Dalecki2004}. Several modalities of clinical procedures exist to perform VNS. 
+
+\begin{figure}[ht]
+  \centering
+  \includegraphics[width=\textwidth]{Chapters/Figures/implantableVNS.png}
+  \label{fig:implantable_electrode_vns}
+\end{figure}
+
+\it{Implantable VNS (iVNS)} requires electrodes directly implanted into the VN, enabling its precise stimulation up to individual nerve fibers. However, this invasive method requires a surgical procedure to subcutaneously implant the electrical stimulation system and an electrode cuff wrapped around the VN near carothid artery (CA) and jugular vein (JV) in the neck region of the patient \cite{}. The required surgical procedures introduces several unnecessary risks that also affect the time required to integrate implantable VNS applications in the market due to the required FDA approval \cite{}. 
+
+\begin{figure}[ht]
+  \centering
+  \includegraphics[width=\textwidth]{Chapters/Figures/transcutaneousAuricularVNS.png}
+  \label{fig:transcutaneous_electrode_vns}
+\end{figure}
+
+\it{Transcutaneous VNS (tVNS)} involves the stimulation of the VN using electrical currents induced by surface electrodes placed in direct contact with the skin of the patient \cite{}. This non-invasive method of VNS usually targets the auricular and cervical branches of the VN, and requires an auricular device containing an electrode to induce the electrical currents in a skin surface that is close enough to the target nerve \cite{}.
+While being less invasive, this method is incapable of achieving high-precision stimulation through the stimulation of specific regions of the VN. This limited spatial precision renders the VNS procedures to be very limited regarding the possible therapeutic outcomes and applications of this method \cite{}.
+
+\begin{figure}[ht]
+  \centering
+  \includegraphics[width=\textwidth]{Chapters/Figures/target_fUSVNS.png}
+  \label{fig:fus_vns}
+\end{figure}
+
+Due to its location is closer to the skin surface, targeting the VN through
+the human neck using low-intensity focused ultrasound (LIFUS) enables safer and
+effective non-invasive methods to perform VNS \cite{Fomenko2018, Rivandi2023, Costa2021, Costa2019}.
+\it{Ultrasound-based VN neuronomodulation (fUS-VNS)} has emerged as a promising method to enable spatially precise VNS procedures targetting a wide range of applications. 
+Moderately increasing the fundamental, central frequency of the US focused beam 
+enables a high lateral precision when delivering a significant amount of energy to the 
+arbitrary VN region thorugh the fUS focal spot \cite{}.
+
+Moreover, existing studies on the impact of VNS on the nervous system of mammals are currently limited by the clinical apparatus required to conduct and measure the impact of VNS on the test subjects, especially when they're aimed at macaques or/and humans. The need for implantable VNS medical devices greatly increases the time it takes to obtain FDA approval to conduct such studies. The limited applicability of tVNS on the range of possible therapeutical applications makes fUS-VNS specially promising for next generation exploratory clinical devices \cite{}. The ability to integrate both reliable imaging and stimulation systems in the same ASIC has become a much wanted goal and and has sprouted an active research field on integrated US medical devices - not only for its implications on the future of point-of-care (POC) therapeutic devices for neurological disorders, but also for mitigating the procedural complexity of using fUS apparatus to target the VN upon conducting exploratory clinical procedures, as discussed in more detail in the next section \cite{}.
+
+\section{Clinical Ultrasound Practice}
+\label{sec:clinical_ultrasound_practice}
+
+\subsection{Ultrasound Neuromodulation Mechanisms}
+\label{subsec:ultrasound_neuromodulation_mechanisms}
+
+\subsection{Ultrasound in the Clinic}
+\label{subsec:ultrasound_in_the_clinic}
 
 
-\newdata*{schlname}
-\newdata*{schlurl}
-\schlname(ea):={School of Architecture}
-\schlurl(ea):={https://www.uminho.pt/EN/uminho/Units/schools-and-institutes/Pages/School-of-Architecture.aspx}
-\schlname(ec):={School of Sciences}
-\schlurl(ec):={https://www.uminho.pt/EN/uminho/Units/schools-and-institutes/Pages/school-of-sciences.aspx}
-\schlname(ed):={School of Law}
-\schlurl(ed):={https://www.uminho.pt/EN/uminho/Units/schools-and-institutes/Pages/school-of-law.aspx}
-\schlname(ee):={School of Engineering}
-\schlurl(ee):={https://www.uminho.pt/EN/uminho/Units/schools-and-institutes/Pages/school-of-Engineering.aspx}
-\schlname(eeg):={School of Economics and Management}
-\schlurl(eeg):={https://www.uminho.pt/EN/uminho/Units/schools-and-institutes/Pages/school-of-economics-and-management.aspx}
-\schlname(em):={School of Medicine}
-\schlurl(em):={https://www.uminho.pt/EN/uminho/Units/schools-and-institutes/Pages/school-of-Medicine.aspx}
-\schlname(ep):={School of Psychology}
-\schlurl(ep):={https://www.uminho.pt/EN/uminho/Units/schools-and-institutes/Pages/school-of-psychology.aspx}
-\schlname(ese):={School of Nursing}
-\schlurl(ese):={https://www.uminho.pt/EN/uminho/Units/schools-and-institutes/Pages/school-of-nursing.aspx}
-\schlname(i3b):={Research Institute 13Bs}
-\schlurl(i3b):={https://www.uminho.pt/EN/uminho/Units/schools-and-institutes/Pages/Institute-I3Bs.aspx}
-\schlname(ics):={Institute of Social Sciences}
-\schlurl(ics):={https://www.uminho.pt/EN/uminho/Units/schools-and-institutes/Pages/institute-of-social-sciences.aspx}
-\schlname(ie):={Institute of Education}
-\schlurl(ie):={https://www.uminho.pt/EN/uminho/Units/schools-and-institutes/Pages/institute-of-education.aspx}
-\schlname(elach):={School of Arts and Humanities}
-\schlurl(elach):={https://www.uminho.pt/EN/uminho/Units/schools-and-institutes/Pages/school-of-arts-and-humanities.aspx}
+
+\section{Challenges in Ultrasound Image-Guided Neuromodulation Integrated Systems}
+\label{sec:problem_definition}
+
+\subsection{Effective Vagus Nerve Stimulation}
+\label{subsec:effective_vagus_nerve_stimulation}
+
+The efficiency of therapeutic procedures associated with VNS is guaranteed by
+ensuring that the sonication protocol is properly applied and US beam energy transfer 
+to the target is optimized. The required lower US centre sonication frequency to achieve lower US signal attenuation when trying to perform non-invasive US imaging
+(and stimulation) of the vagus nerve through the human neck's muscle
+wall conditions the reconstructed US 2D US \textit{brightness-mode} (B-mode) image to low spatial resolution \cite{Szabo2014_1_8_2_Ultrasound}. Probe placement mismatch and the risk of US image mis-interpretation increases the influence of human-error when
+targetting the VN through the application of the control-loop
+presented in Fig. \ref{fig:vagus_nerve_stim_apps} e). Additionally, 
+the vagus nerve can present six different positions according to reported 
+anatomical studies, further increasing the difficulty of identifying the correct 
+patient-specific location of the vagus nerve in real time, 
+even for trained physicians \cite{}.
+
+Finally, when targetting the VN while varying the US sonication protocol
+parameters to explore the influence of each parameter on the
+patient's response to the VNS procedure, the VN's location must be
+accurately recognized and targeted to ensure an higher confidence
+level on the results of the therapeutic procedure. Failing to target
+the VN leads to an ineffective clinical therapeutic or scientific
+exploration session \cite{Ahmed2022}.
+\par
+
+%A growing interest in the
+%development of automated systems performing the recognition of the
+%VN's location in the US B-mode image, aiding trained physicians by reducing 
+%human-induced error possibility \cite{Drukker2020, Young2021, Huan2024}.
+%\textit{Machine learning} (ML) algorithms enable real-time
+%recognition of the vagus nerve location  in the US B-mode image by
+%constraining the time overhead of the algorithm to the training
+%process of the ML model. The extracted position or region of interest
+%(ROI) of the VN in the US B-mode can then be used to guide the LIFUS
+%wave to the target location, ensuring the effectiveness of the VNS
+%procedure \cite{Drukker2020, Battal2021}. However, current eﬀorts
+%optimize feature extraction processes using
+%high-level alogrithms running on general purpose complex processing 
+%units such as the \textit{central processing unit} (CPU) or the
+%\textit{graphics processing unit} (GPU). Template-image based algorithm 
+%have also been recently proposed to reduce the hardware complexity required 
+%to perform VN location detection, but it still requires the use of a dedicated 
+%digitally-heavy processing unit implemented using an field-programmable gate array %(FPGA) 
+%placed at the back end of the signal acquisition chain \cite{Huan2024}.
+%As such, current research efforts US
+%scatterer localization are based on low-portability and/or power-hungry
+%solutions placed at the back end of the signal acquisition chain
+%\cite{Battal2021, ChangKyo2021, Youn2020, Nair2020}.
+
+\subsection{Ultrasound Imaging ASIC Output Data-Rate and Power Dissipation Requirements}
+\label{subsec:ultrasound_imaging_data_rate}
+In general, two main methods of performing US imaging 
+exist: 1) planar wave compounding (PWC) imaging and 2) scan-line (SL) imaging \cite{Szabo2014}. SL imaging enables golden-standard US imaging quality, once ultrasound is two-way focused -- an US beamline is focused on a point in a numerically predefined imaging grid using a convex lens. Because the recovered echoes from that focused point in space are assumed to carry the majority of the power (assuming negligible secondary lobe energy), an inverse concave lens can be directly used to reconstruct the spatial information of the medium from the temporal information received. Contrarily, planar wave imaging methods such as PWC do not focus US in a single beam profile, but rather introduce controlled phase delays in the transmitted pulses to create a planar wavefront sonicating the whole imaging media at once. As such, during reception, the information of the medium arrives highly correlated between each point of the imaging grid, and must be recovered simultaneously before starting the reconstruction of the US image. Both methods require high data-rates to transmit the high volume of samples generated by the US transducer array to the back-end data processing unit. Digital communication of the quantized information greatly increases the US imaging ASIC's output signal integrity. 
+However, the high data-rate requirements lead to high power dissipation on the quantizer stages, the biasing circuitry, high-speed serial communication
+interfaces and ASIC output load drivers \cite{Hopf2023, Chen2017, 
+Tan2018, Jung2018}. 
+
+\begin{figure}[bp]
+  \centering
+  \includegraphics[width=\textwidth]{Chapters/Figures/Introduction/high_power_approach.pdf}
+  \label{fig:high_power_solution}
+  \caption{An envisaged US imaging ASIC in a typical fUS therapeutic clinical procedure  information flux. An ultrasound image can be reconstructed from the recovered echoes, transported to the image reconstruction and data acquisition system in digital domain for higher signal integrity reliability.}
+\end{figure}
 
 
-\begin{ntUniversity}{University of Minho}
-    {
-      \docCover{uminho-ea-phd-en,uminho-ea-msc-en}
-    } & {
-      \schlName{\theschlname(ea)}{\uppercase{ea}-UMINHO}{\theschlurl(ea)}
-      \degreeName{All PhD Programs}{PhD}{https://www.uminho.pt/EN/education/educational-offer/Pages/PhD-degrees.aspx}
-      \degreeName{All MSc Programs}{MSc}{https://www.uminho.pt/EN/education/educational-offer/Pages/Master-degrees.aspx}
-    }\\
-    {
-      \docCover{uminho-ec-phd-en,uminho-ec-msc-en}
-    } & {
-      \schlName{\theschlname(ec)}{\uppercase{ec}-UMINHO}{\theschlurl(ec)}
-      \degreeName{All PhD Programs}{PhD}{https://www.uminho.pt/EN/education/educational-offer/Pages/PhD-degrees.aspx}
-      \degreeName{All MSc Programs}{MSc}{https://www.uminho.pt/EN/education/educational-offer/Pages/Master-degrees.aspx}
-    }\\
-    {
-      \docCover{uminho-ed-phd-en,uminho-ed-msc-en}
-    } & {
-      \schlName{\theschlname(ed)}{\uppercase{ed}-UMINHO}{\theschlurl(ed)}
-      \degreeName{All PhD Programs}{PhD}{https://www.uminho.pt/EN/education/educational-offer/Pages/PhD-degrees.aspx}
-      \degreeName{All MSc Programs}{MSc}{https://www.uminho.pt/EN/education/educational-offer/Pages/Master-degrees.aspx}
-    }\\
-    {
-      \docCover{uminho-ee-phd-en,uminho-ee-msc-en}
-    } & {
-      \schlName{\theschlname(ee)}{\uppercase{ee}-UMINHO}{\theschlurl(ee)}
-      \degreeName{All PhD Programs}{PhD}{https://www.uminho.pt/EN/education/educational-offer/Pages/PhD-degrees.aspx}
-      \degreeName{All MSc Programs}{MSc}{https://www.uminho.pt/EN/education/educational-offer/Pages/Master-degrees.aspx}
-    }\\
-    {
-      \docCover{uminho-eeg-phd-en,uminho-eeg-msc-en}
-    } & {
-      \schlName{\theschlname(eeg)}{\uppercase{eeg}-UMINHO}{\theschlurl(eeg)}
-      \degreeName{All PhD Programs}{PhD}{https://www.uminho.pt/EN/education/educational-offer/Pages/PhD-degrees.aspx}
-      \degreeName{All MSc Programs}{MSc}{https://www.uminho.pt/EN/education/educational-offer/Pages/Master-degrees.aspx}
-    }\\
-    {
-      \docCover{uminho-em-phd-en,uminho-em-msc-en}
-    } & {
-      \schlName{\theschlname(em)}{\uppercase{em}-UMINHO}{\theschlurl(em)}
-      \degreeName{All PhD Programs}{PhD}{https://www.uminho.pt/EN/education/educational-offer/Pages/PhD-degrees.aspx}
-      \degreeName{All MSc Programs}{MSc}{https://www.uminho.pt/EN/education/educational-offer/Pages/Master-degrees.aspx}
-    }\\
-    {
-      \docCover{uminho-ep-phd-en,uminho-ep-msc-en}
-    } & {
-      \schlName{\theschlname(ep)}{\uppercase{ep}-UMINHO}{\theschlurl(ep)}
-      \degreeName{All PhD Programs}{PhD}{https://www.uminho.pt/EN/education/educational-offer/Pages/PhD-degrees.aspx}
-      \degreeName{All MSc Programs}{MSc}{https://www.uminho.pt/EN/education/educational-offer/Pages/Master-degrees.aspx}
-    }\\
-    {
-      \docCover{uminho-ese-phd-en,uminho-ese-msc-en}
-    } & {
-      \schlName{\theschlname(ese)}{\uppercase{ese}-UMINHO}{\theschlurl(ese)}
-      \degreeName{All PhD Programs}{PhD}{https://www.uminho.pt/EN/education/educational-offer/Pages/PhD-degrees.aspx}
-      \degreeName{All MSc Programs}{MSc}{https://www.uminho.pt/EN/education/educational-offer/Pages/Master-degrees.aspx}
-    }\\
-    {
-      \docCover{uminho-ics-phd-en,uminho-ics-msc-en}
-    } & {
-      \schlName{\theschlname(ics)}{\uppercase{ics}-UMINHO}{\theschlurl(ics)}
-      \degreeName{All PhD Programs}{PhD}{https://www.uminho.pt/EN/education/educational-offer/Pages/PhD-degrees.aspx}
-      \degreeName{All MSc Programs}{MSc}{https://www.uminho.pt/EN/education/educational-offer/Pages/Master-degrees.aspx}
-    }\\
-    {
-      \docCover{uminho-ie-phd-en,uminho-ie-msc-en}
-    } & {
-      \schlName{\theschlname(ie)}{\uppercase{ie}-UMINHO}{\theschlurl(ie)}
-      \degreeName{All PhD Programs}{PhD}{https://www.uminho.pt/EN/education/educational-offer/Pages/PhD-degrees.aspx}
-      \degreeName{All MSc Programs}{MSc}{https://www.uminho.pt/EN/education/educational-offer/Pages/Master-degrees.aspx}
-    }\\
-    {
-      \docCover{uminho-elach-phd-en,uminho-elach-msc-en}
-    } & {
-      \schlName{\theschlname(elach)}{\uppercase{elach}-UMINHO}{\theschlurl(elach)}
-      \degreeName{All PhD Programs}{PhD}{https://www.uminho.pt/EN/education/educational-offer/Pages/PhD-degrees.aspx}
-      \degreeName{All MSc Programs}{MSc}{https://www.uminho.pt/EN/education/educational-offer/Pages/Master-degrees.aspx}
-    }\\
-    {
-      \docCover{uminho-i3b-phd-en,uminho-i3b-msc-en}
-    } & {
-      \schlName{\theschlname(i3b)}{\uppercase{i3b}-UMINHO}{\theschlurl(i3b)}
-      \degreeName{All PhD Programs}{PhD}{https://www.uminho.pt/EN/education/educational-offer/Pages/PhD-degrees.aspx}
-      \degreeName{All MSc Programs}{MSc}{https://www.uminho.pt/EN/education/educational-offer/Pages/Master-degrees.aspx}
-    }\\
-\end{ntUniversity}
+\begin{equation}
+  P_{SER} = p_1 \ F_S \ C_{Line} V_{DDD}^2 \ = 0.66 \cdot 50\mathrm{MHz} \cdot 4\mathrm{pF} \cdot {(0.9\mathrm{V})}^2 = 27\mathrm{mW}
+  \label{eq:serial_power_dissipation}
+\end{equation}
+
+As an example, let us consider an US imagig ASIC integrated within a PCB with a digital processing backend (Fig) performing an image acquisition. Depending on the metal trace width and length, the PCB connection between both chips can easily achieve a 1 - 4pF parasitic capacitance ($C_{Line}$). The system features 32 channels, with an 8 bit quantizer per stage, operating at a nominal sampling frequency ($F_S$) of 50 MHz. The total bit rate achieves $32 \cdot 8b \cdot 50 \ \mathrm{MHz} = 1.6 \ \mathrm{Gbyte/s}$. Considering that the US imaging ASIC's serial communication line, biased at a digital supply ($V_{DDD}$) of 0.9V, presents a 66\% chance ($p_1$) of transmitting a logic "1", then the total dynamic power dissipation of the serial transmission ($P_{SER}$) can easily achieve 27mW, as observed from (\ref{eq:serial_power_dissipation}). If we consider that each AFE channel features a total power dissipation of 1.0mW, a value well within the state of the art, then the total power dissipation of the 32 channels is 32mW. Almost the same amount of power is dissipated in acquiring and processing the echo signals as well as exporting them out of the ASIC due to the very high data throughput required when performing US imaging. Moreover, this problem is aggravated when interfacing thousands of channels. A typical state-of-the-art US imaging system interfaces with a transducer matrix capable of 3D imaging by stacking multiple 2D B-mode image slices together, and to achieve enough resolution to enable the distinction of the complex anatomy of the human neck, at least 32-by-32 (1024) channels are required. 
+
+\section{Dissertation Goal and Thesis Plan Organization}
+\label{subsec:goal_and_organization}
+
+%TODO: introduce citations
+
+Both preclinical and clinical studies can become great benefactors of miniaturized US transducer arrays that allow for targetting different regions of the VN, at different intensities and levels of spatial precision, once the variation of these parameters can lead to new insights and unlock new treatments. However, the targeting of the VN is a complex procedure that must be guaranteed to provide enough confidence level in the obtained results of the exploratory procedure, as well as guaranteeing the safety of future users of an envisaged wearable fUS VNS device. As discussed above, the guidance of the focused beam has been performed using bulky medical imaging devices, introducing a significant level of procedural and bureaucratic complexity that can lead to the cost increase of each study as well, as decreasing the celerity of the its conclusion. An integrated, minimally invasive, reconfigurable, wearable device capable of reliable US imaging as well as fUS stimulation has the potential remove these barriers.
+
+\par
+The pursuit for the miniaturization of US imaging-enabled ASICs has led most research groups to tackle the problem of power dissipation reduction from an IC-design perspective solemnly. However, as further addressed, the decisions on how the integration between the sensor matrix and the interfacing integrated electronics are performed have the possibility of drastically impacting both the power dissipation of the data readout system as well as mechanically compressing the information on the phase of the received US echoes. Further compression can also be achieved by adopting a channel multiplexing strategy that effectively preserves the phase information of the received echoes, enabling an higher signal-to-noise (SNR) ratio in the reconstructed images. Moreover, these sensor integration decisions, combined with possible system-design choices, also allow vast amounts of free and additional space inside an IC that can be used to introduce a more complex, and refined control of power-efficient high-voltage (HV) pulsers to finally converge towards a wearable device capable of US imaging and stimulation that complies with FDA regulations regarding the safety of the device upon its direct interface with the patient. The focus of these work is the development of an highly miniaturized, and energy efficient US imaging device, capable of seamless integration within a low-form-factor wearable system with the ability of FUS beam-steering for VNS (Fig. \ref{fig:main_goal}). 
+
+\par
+A brief, but necessary introduction to US waves and their physical properties, the transducers used to perform a bidirectional translation of US into electrical signals, and US imaging algorithms and system specifications is discussed in Chapter \ref{cha:ultrasound_transducers_and_ultrasound_imaging}.  
+Insightful discussions on the current methods used to address the power dissipation limitations and the data throughput of an US imaging system are provided in Chapter \ref{cha:state-of-art}.  These discussions include a) which ultrasound transducer materials are best suited for each US application, with a special focus on the most suitable materials and transducer architectures for a FUS stimulation application and its implications regarding the image quality of these transducers, b) currently existing transducer matrix-interfacing electronics integration methods and their implications towards the quality and resolution of the reconstructed US images and c) state-of-the-art ASICs for US echoes readout, with a special focus on the methods used to compress the number of output channels of the US RX system and the associated channel multiplexing schemes, promoting the power dissipation and output data-throughput reduction of the system. The implication of these channel multiplexing schemes on the compression of the sampled US echoes in the axis of time is also discussed, at it is of utmost importance to infer on the required number of discrete-time US echo samples required to reconstruct a reliable US image. Chapter \ref{cha:state_of_the_art} culminates in the research questions selected to be addressed in this dissertation. Finally, Chapter \ref{cha:literature_review_methodology_and_workplan} provides a description of the methods used to select the scientific peer-reviewed material, and its sources, used to establish the ideas discussed throughout this dissertation plan, ending with a presentation of the devised  work plan to be developed to achieve the goal of this dissertation.
 
 
+
+%Instead of retrieving all the required data to reconstruct an ultrasound image, 
+%so that the position of the VN can be detected, another possible solution would be to 
+%perform the detection of the VN directly on chip using an analog inference system.
+
+%\subsection{Towards On-Chip Feature Extraction in Ultrasound Image-Guided Stimulation}
+%\label{subsec:on_chip_feature_extraction}
 %
-% % \begin{ntUniversity}{ISCTE — Instituto Universitário de Lisboa}
-% %     \ntSchool{cover-iscteiul-eta-phd}%
-% %              {Escola{ de Tecnologias e Arquitectura};{ETA-ISCTE-IUL};{https://ciencia.iscte-iul.pt/schools/escola-tecnologias-arquitectura}%}
-% % \end{ntUniversity}
+%Conventional biomedical application system architectures are
+%constituted by a front-end signal acquisition interface and a
+%back-end data processing unit to perform feature extraction. The high
+%amount of data generated by the front-end signal acquisition
+%interface requires high data-rates to be sent to the back-end data
+%processing unit, leading to high power-dissipation. The integration
+%of feature extraction algorithms closer to the sensor enables this operation 
+%to be performed with a lower time-overhead and
+%power-dissipation, once only the extracted features are trasnmitted
+%\cite{vanAssche2023}. On-chip feature extraction has observed a growing trend,
+% shown to eliminate the need for the use of GPUs and CPUs on the back-end of the application
+%\cite{Azghadi2020, vanAssche2023}. Moreover, recent ML accelerator architecture research 
+%trends show that analog-based integrated circuits enable 
+%optimal power-dissipation when implementing feature extraction, regression and 
+%classification algorithms while maintaining similar computational 
+%speed compared to their digital counterpart \cite{Tsai2018, Haensch2019, Xiao2020}. 
 %
-\begin{ntUniversity}{Instituto Politécnico de Lisboa}
-    {
-      \docCover{ipl-isel-msc-en}
-    } & {
-      \schlName{Instituto Superior de Engenharia de Lisboa}{ISEL-IPL}{https://www.isel.pt}
-      \degreeName{All MSc Programs}{MSc}{https://www.isel.pt/candidatos/candidaturas/mestrados}
-    }\\
-\end{ntUniversity}
+%Integrating the ML system closer to the sensor
+%could enhance cost effectiveness, power-eﬃciency, accessibility and
+%commodity for patients and medical professionals by increasing the
+%portability of the medical imaging apparatus, effectively enabling
+%true point-of-care (POC) applications \cite{vanAssche2023, Damak2021}.
 
-\begin{ntUniversity}{Instituto Politécnico de Setúbal}
-    {
-      \docCover{ips-ests-msc-en}
-    } & {
-      \schlName{Escola Superior de Tecnologia de Setúbal}{ISEL-IPL}{https://www.estbarreiro.ips.pt}
-      \degreeName{All MSc Programs}{MSc}{https://www.estbarreiro.ips.pt/candidaturas/mestrados}
-    }\\
-\end{ntUniversity}
+%\subsection{Proposed Solution}
+%\label{subsec:proposed_solution}
 
-\begin{ntUniversity}{Other Universities/Schools/Degrees}
-    {
-      \docCover{other-esep-msc-en}
-    } & {
-      \schlName{Escola Superior de Enfermagem do Porto}{ESEP}{https://www.esenf.pt/pt}
-      \degreeName{All MSc Programs}{MSc}{https://estudar.esenf.pt/mestrados}
-    }\\
-\end{ntUniversity}
-
-
-\section{Getting Started}
-\label{sec:getting_started}
-
-The template provides an \emph{easy to use} setting for you to write your thesis/dissertation in \LaTeX:
-\begin{itemize}
-  \item  Select your school;
-  \item Fill your thesis metadata (title, research field, etc) in the file “\texttt{template.tex}”;
-  \item Create your thesis/dissertation contents using the files in folder “\texttt{Chapters}”; and
-  \item Process using you favorite \LaTeX\ processor (pdf\LaTeX, \XeLaTeX\ or \LuaLaTeX).
-\end{itemize}
-
-\subsection{Using Overleaf}
-\label{sub:using_overleaf}
-
-\ntindex[Installation!Overleaf]{}
-\ntindex[Using!Overleaf]{}
-
-\newcommand{\Overleaf}{\href{https://www.overleaf.com?r=f5160636&rm=d&rs=b}{Overleaf}}
-
-\begin{wrapfigure}{r}{0.3\linewidth}
-% \vspace*{-10ex}
-\includegraphics[width=\linewidth]{overleaf}%
-\caption{NOVAthesis template in Overleaf.}
-\label{fig:overleaf}
-\end{wrapfigure}
-\mbox{}\Overleaf\ is a collaborative cloud-based LaTeX editor used for writing, editing and publishing scientific documents. Like “Google Docs”,  for \LaTeX\ users. You can edit and compile your \LaTeX\ source on the cloud, without installing software in your own computer, and, much like \emph{Google Docs}, you can share your document with others users and everybody can edit the same file at the same time (this may be dangerous).
-
-If you do not have an account in \Overleaf, you must \href{https://www.overleaf.com?r=f5160636&rm=d&rs=b}{create one first}.
-
-Once you have an account, please access the \gls{novathesis} template in \href{https://www.overleaf.com/latex/templates/novathesis-v7-dot-1-18/jhqwhtcwbmqc}{Overleaf} and select the green button \emph{Open as Template} (see \Autoref{fig:overleaf}).
-
-\bgroup
-  \itshape
-  Please notice that the version currently available in Overleaf (v7.1.18) is slightly outdated (current version is v\novathesisversion). A new version (v7.1.29) will be submitted to Overleaf soon.  Until then, please:
-  \begin{enumerate}
-    \item Download the \href{https://github.com/joaomlourenco/novathesis/archive/main.zip}{latest version} from the GitHub repository as a Zip file.
-    \item Login to your favorite LaTeX cloud service. I recommend \href{https://www.overleaf.com/?r=f5160636&rm=d&rs=b}{Overleaf} but there are alternatives (these instructions apply to Overleaf and you'll have to adapt for other providers).
-    \item In the menu select: \texttt{New project} $\rightarrow$ \texttt{Upload project}.
-    \item Upload the zip file.
-    \item Select “template.tex” as the main file.
-    \item Let Overleaf compile the document.
-  \end{enumerate}
-\egroup
-
-\begin{tcolorbox}[colback=red!8]
-	Notice that you need a (student) subscription to compile the \novathesis\ template in Overleaf, otherwise your compilation will always time out.
-\end{tcolorbox}
-
-\subsection{Using a Local \LaTeX\ Installation Local}
-\label{sub:using_local_latex}
-
-\ntindex[Installation!Local installation]{}
-\ntindex[Using!Local installation]{}
-
-\begin{wrapfigure}{r}{0.3\linewidth}
-\vspace*{-7ex}
-\includegraphics[width=\linewidth]{github}%
-\caption{The NOVAthesis Project page in GitHub.}
-\label{fig:github2}
-\end{wrapfigure}
-
-First of all, start by installing \LaTeX\ in your computer.  There are two main distributions, \href{https://miktex.org}{\ntindex{\MikTeX}}\ and \href{https://www.tug.org/texlive/}{\ntindex{\TeXLive}}, and both of them are available for the~3 most popular Operating Systems: Linux, macOS and Windows.
-
-Be aware that a full installation of \MikTeX\ or \TeXLive\ will take near~5\,GB of hard disk space.  So, think twice before installing the full distribution.  See the \gls{novathesis} Wiki for the \href{https://github.com/joaomlourenco/novathesis/wiki/installing-latex#minimal-installation-in-any-of-the-systems-above}{list of packages required to compile the template}.
-
-Once you have \LaTeX\ up and running, remember to install a good \LaTeX\ text editor.  I recommend you to take a look at  \href{https://tex.stackexchange.com/questions/339/latex-editors-ides}{this post} in the \url{tex.stackexchange.com} site.  If you want a quick and dirty recommendation, try \href{https://www.texstudio.org/}{\ntindex{TeXStudio}}.
-
-Now, you must access the \gls{novathesis} repository in \href{https://github.com/joaomlourenco/novathesis}{GitHub}, select the green button \emph{Code} and then \emph{download} (or \emph{clone}) the template.  You will always get the latest version of the template (currently v\novathesisversion\ from \novathesisdate).
-
-
-\section{Getting Help}
-\label{sec:getting_help}
-
-\ntindex[Help]{}
-
-No! You don't have to use this template to write your thesis.  You don't even have to use \LaTeX.  However, writing a thesis is serious stuff, and which tool you shall use to write it is not a decision to make lighthearted.
-
-\LaTeX\ is hard enough by itself.  This template aims at making your life easier, but not easy. If you choose to use this template to write your thesis, you are very welcome.  However, don't expect me to provide you help with \LaTeX.  Look for help with your friends (you have some friends, don't you?), or search the web, or try even to read some book(s) on \LaTeX. In the end you will certainly find the experience rewarding.
-
-When you come to the point of “\emph{How do I do this with the \novathesis\ template?}”, remember…
-
-\begin{enumerate}
-  \item To check the \href{https://github.com/joaomlourenco/novathesis/wiki}{\gls{novathesis} wiki} and have some hope!  \emojiSmile
-  \item \href{https://www.google.com}{Google} is your best friend.
-  \item Search the \href{https://github.com/joaomlourenco/novathesis/discussions}{GitHub Discussions page} for a question related to yours.  \emph{If and only if} you don't find one, then post your own question in English please!
-  \item Search the \href{https://www.facebook.com/groups/novathesis}{NOVAtheis Facebook group} for a question related to yours.  \emph{If and only if} you don't find one, then post your own question in either Portuguese or English, at your preference.
-\end{enumerate}
-
-When you post your own question, remember to \textbf{always} state the \gls{novathesis} version number you are using and referring to.
-
-\begin{tcolorbox}[colback=blue!8]
-	\centering
-Please do not attempt to contact me directly (email, Messenger, etc)…\\I WILL NOT REPLY!
-\end{tcolorbox}
-
-
-\subsection{Suggestions, Bugs and Feature Requests} % (fold)
-\label{sub:suggestions_bugs_and_feature_requests}
-
-\begin{description}
-  \item[Help:] If you just need some help, see above \Autoref{sec:getting_help}.
-  \item[Suggestion:] \ntindex[Suggestions]{} Do you have a suggestion/recommendation? Please add it to the wiki and help other users!
-  \item[Bug:] \ntindex[Bugs]{} Did you find a bug? Please open an issue. Thanks!
-  \item[New Feature:] \ntindex[Feature Requests]{} Would you like to request a new feature (or support of a new School)? Please open an issue. Thanks!
-
-\end{description}
-
-
-
-% subsection suggestions_bugs_and_feature_requests (end)
-
-
-
-
-\section{Donors}
-\label{sec:donations}
-
-\ntindex[Donations]{}
-
-The \href{https://github.com/joaomlourenco/novathesis/wiki#donators}{list of \emph{Donnors}} is available in the \gls{novathesis} Project page.
-
-
-\section{Disclaimer}
-\label{sec:disclaimer}
-
-\ntindex[Disclaimer]{}
-
-Although the \gls{novathesis} template is endorsed by some Schools (e.g., \href{https://www.fct.unl.pt/estudante/informacao-academica/teses-e-dissertacoes}{linked from FCT-NOVA web site}), the \gls{novathesis} template \textbf{this not an official template} for any School.
-
-The \gls{novathesis} template exists to make your life easier and we do our best to make it compliant to the supported ($+25$) Schools' regulations but, in the end of the line, you and only you are accountable for both the look and the contents of the document you submit as your thesis/dissertation.
+%The objective of this dissertation is to converge towards an US RX system that is capable of 
+%acquiring the ultrasound signals using a dedicated analog-front end (AFE) aiming to minimize the 
+%total dissipated power, as well as detecting the VN position using an on-chip regression 
+%analog neural network (ANN). The block-diagram of the system is represented in Fig. \ref{fig:block_diagram}. 
+%The target system integrates a multiplexed imaging path and analog inference path. When the 
+%inference path is selected, the regression ANN performs the detection of the VN position from the 
+%US RF time-series data directly. On the other hand, to guarantee the safety of patient when subjected 
+%the application, and to mitigate the impact of the regression error, the imaging path can be selected 
+%to enable the reconstruction of an US B-mode image to allow for the observation of the sonicated medium, 
+%and for the recalibration of the ANN.

@@ -6,32 +6,35 @@
 %% Abstract in English([^%]*)
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\typeout{NT FILE abstract-en.tex}%
+\typeout{NT FILE abstrac-en.tex}%
 
-Regardless of the language in which the dissertation is written, usually there are at least two abstracts: one abstract in the same language as the main text, and another abstract in some other language.
+\textit{Vagus nerve stimulation} (VNS) is an effective therapeutic medical procedure 
+for the supression of epileptic seizures, depression, mood and apetite control and 
+chronic pulmonary obstructive disease (COPD).
+Low-intensity focused ultrasound (LIFUS) has been shown to be a promising 
+non-invasive neuromodulation technique to perform VNS.
+The safety and effectiveness of the procedure is ensured by
+trained physicians and technitians operating the device while relying on real-time 
+imaging to guide the procedure. Failing to acquire the target nerve results in 
+poorly applied US sonication procedure, reducing the effectiveness of the therapeutic session. 
+Mechanical or thermally-induced cellular tissue damage can also become evermore 
+likely when aiming for finer and more precise stimulation procedures. 
 
-The abstracts' order varies with the school.  If your school has specific regulations concerning the abstracts' order, the \gls{novathesis} (\LaTeX) template will respect them.  Otherwise, the default rule in the \gls{novathesis} template is to have in first place the abstract in \emph{the same language as main text}, and then the abstract in \emph{the other language}. For example, if the dissertation is written in Portuguese, the abstracts' order will be first Portuguese and then English, followed by the main text in Portuguese. If the dissertation is written in English, the abstracts' order will be first English and then Portuguese, followed by the main text in English.
-%
-However, this order can be customized by adding one of the following to the file \verb+5_packages.tex+.
+The need for an automated closed-loop control system is evident to ensure 
+the focal spot is correctly positioned, ensuring optimal application of the 
+stimulation proceudre. Correct application of US sonication protocols not 
+only has the potential to reduce therapeutic sessions duration, but also 
+enabling improved exploratory medical procedures to study the regulatory function 
+of the peripheral nervous system by reducing the number of control variables 
+during scientific experimental procedures.
 
-\begin{verbatim}
-    \ntsetup{abstractorder={<LANG_1>,...,<LANG_N>}}
-    \ntsetup{abstractorder={<MAIN_LANG>={<LANG_1>,...,<LANG_N>}}}
-\end{verbatim}
-
-For example, for a main document written in German with abstracts written in German, English and Italian (by this order) use:
-\begin{verbatim}
-    \ntsetup{abstractorder={de={de,en,it}}}
-\end{verbatim}
-
-Concerning its contents, the abstracts should not exceed one page and may answer the following questions (it is essential to adapt to the usual practices of your scientific area):
-
-\begin{enumerate}
-  \item What is the problem?
-  \item Why is this problem interesting/challenging?
-  \item What is the proposed approach/solution/contribution?
-  \item What results (implications/consequences) from the solution?
-\end{enumerate}
+Integrating the acquisition of the target nerve's position closer to the sensor 
+ultimately leads to a lower power and highly portable medical device that can evolve 
+to a point-of-care device.
+This dissertation proposes a CMOS application-specific integrated circuit (ASIC) for 
+real-time US imaging, integrating a capacitive gated recurrent unit (GRU) neural network
+within its readout signal chain capable of closing the loop of a control system aiming 
+for automatic, secure and precise correction of the beamsteering procedure. 
 
 % Palavras-chave do resumo em Inglês
 % \begin{keywords}
