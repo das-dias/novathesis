@@ -1,0 +1,15 @@
+Medium,Attenuation [$dB \ MHz^{-1} \ cm^{-1}$]
+Air,1.64
+Water,0.0022
+Blood,0.2
+Bone (Cortical),6.9
+Bone (Trabecular),9.94
+Brain,0.6
+Breast,0.75
+Cardiac,0.52
+Connective Tissue,1.57
+Fat,0.48
+Marrow,0.5
+Muscle,1.09
+Tendon,4.7
+Soft Tissue (Average),0.54

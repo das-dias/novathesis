@@ -242,7 +242,7 @@ to be well approximated by an homogeneous medium. Attenuation through absorption
 issue to address when developping readout systems for diagnostic US. Attenuation 
 of an acoustic wave propagating within a medium ($DR_P$ in dB) is linear-in-dB, and is represented by an exponent power factor that is directly proportional to 
 the center frequency of the carrier of the wave ($f_0$ in $MHz$), the \emph{roundtrip} distance the wave (and in diagnostic US, its corresponding echo) 
-travels ($D_R$ in $cm$) and the attenuation coefficient of the material it propagates in ($\alpha$ in $dB MHz^{-1} cm^{-1}$) (\ref{eq:ch2_propagation_dyn_range}). 
+travels ($D_L$ in $cm$) and the attenuation coefficient of the material it propagates in ($\alpha$ in $dB MHz^{-1} cm^{-1}$) (\ref{eq:ch2_propagation_dyn_range}). 
 Throughout this thesis, this propagation-induced attenuation ($DR_P$) is also referred to as \emph{propagation dynamic range}. 
 US waves can be decomposed into a superposition of vector-basis functions that are gaussian-modulated cosine 
 temporal impulse responses \cite{}. Each gaussian distribution modulating the center tone has a 6-dB pass-band bandwidth 
@@ -253,7 +253,7 @@ from 60 dB to 120 dB. \emph{instantaneous dynamic range} and other transducer-re
 further discussed in Sec. \ref{sec:ultrasound_transducers} with a greater depth.
 
 \begin{equation}
-  DR_P = f_0 \ D_R \ \alpha \ \mathrm{[dB \ MHz^{-1} \ cm^{-1}]}
+  DR_P = f_0 \ D_L \ \alpha \ \mathrm{[dB \ MHz^{-1} \ cm^{-1}]}
   \label{eq:ch2_propagation_dyn_range}
 \end{equation}
 
@@ -262,17 +262,128 @@ further discussed in Sec. \ref{sec:ultrasound_transducers} with a greater depth.
   \label{eq:ch2_propagation_dyn_range}
 \end{equation}
 
-\section{Electrical Ultrasound Transducers}
+Common bio-materials found within the body 
+of mammals feature attenuation coefficients 
+typically leading to 30 - 60 dB of 
+\emph{propagation dynamic range}. The attenuation 
+coefficients of such bio-materials can be found in 
+table \ref{tab:ch2_attenuation_coefs}.
+
+\begin{table}[!ht]
+    \centering
+    \caption{Attenuation coefficients for commonly found biological mediums in the body of mammals \cite{Culjat2010uim\&b}}
+    \begin{longtable}{lc}
+        Medium & Attenuation ($\alpha$) [$dB \ MHz^{-1} \ cm^{-1}$] \\ \hline
+        Air & 1.64 \\ 
+        Water & 0.0022 \\ 
+        Blood & 0.2 \\ 
+        Bone (Cortical) & 6.9 \\ 
+        Bone (Trabecular) & 9.94 \\ 
+        Brain & 0.6 \\ 
+        Breast & 0.75 \\ 
+        Cardiac & 0.52 \\ 
+        Connective Tissue & 1.57 \\ 
+        Fat & 0.48 \\ 
+        Marrow & 0.5 \\ 
+        Muscle & 1.09 \\ 
+        Tendon & 4.7 \\ 
+        Soft Tissue (Average) & 0.54 \\ 
+    \end{longtable}
+    \label{tab:ch2_attenuation_coefs}
+\end{table}
+
+\section{Ultrasound Transducers}
 \label{sec:ultrasound_transducers}
+
+In this section, the fundamental concepts enabling the 
+representation of the US trasnducer in the electrical 
+domain are described. The electrical modelling of 
+any trasnducer geometry and material is fundamental to 
+optimize the design of \emph{unipolar} and \emph{multipolar} 
+drivers in \emph{therapeutic} US. An accurate electrical impedance 
+modelling of the trasnducer also enables the optimization 
+of \emph{DC-decoupling} and \emph{input impedance} matching networks 
+in the \emph{low-noise amplifier} (LNA) located at the interface 
+between the transducer and the AFE.
+
+
+
+The \emph{Butterworth-van-Dyke} (BVD) model \cite{VanDyke1928poti} (Fig. \ref{fig:ch2_bvd_model}) is a simplification of the 
+Krimholtz, Leedom, and Matthaei (KLM) model \cite{Leedom1971itosau} considering the latter is operated as 
+a resonating network. While the KLM model is a complete two-port model allowing for the bidirectional 
+direct translation between the 
+acoustic pressure interfacing with the piezoelectric transducer's surface and the electric potential within 
+the top and bottom plate, the BVD model outputs an electrical output from the electrical input 
+equivalent to a generated \emph{displacement current} ($I_d$) or \emph{displacement voltage} ($V_d$).
+Such a transformation in analysis-domain greatly simplifies the electrical modelling 
+of the piezoelectric model from a pre-characterization process of its \emph{charge-displacement} 
+system matrix representation \cite{Szabo2014duiioTransducers}. The BVD model includes a resonant 
+branch ($R_m$ , $L_m$ , $C_m$ ) modelling the mechanical resonance of the transducer, and a parasitic capacitor 
+($C_p$ ) representing the electrical losses dampening the resonator branch over time Fig. \ref{fig:ch2_bvd_model}).
+
+\begin{figure}
+  \centering
+  \begin{subfigure}[][][t]{0.3\textwidth}
+      \includegraphics[width=0.45\textwidth]{Chapters/Figures/Ch2_UltrasoundFundamentals/bvd_model.pdf}
+      \label{fig:ch2_bvd_model}
+  \end{subfigure}
+  %\hfill
+  \begin{subfigure}[][][t]{0.3\textwidth}
+      \includegraphics[width=0.45\textwidth]{Chapters/Figures/Ch2_UltrasoundFundamentals/planar_piezo.pdf}
+      \label{fig:ch2_planar}
+  \end{subfigure}
+  %\hfill
+  \begin{subfigure}[][][b]{0.3\textwidth}
+      \includegraphics[width=0.45\textwidth]{Chapters/Figures/Ch2_UltrasoundFundamentals/cilinder_piezo.pdf}
+      \label{fig:ch2_cillinder}
+  \end{subfigure}
+  %\hfill
+  \begin{subfigure}[][][b]{0.3\textwidth}
+      \includegraphics[width=0.45\textwidth]{Chapters/Figures/Ch2_UltrasoundFundamentals/pillar_piezo.pdf}
+      \label{fig:ch2_pillar}
+  \end{subfigure}
+  %\hfill
+  \begin{subfigure}[][][b]{0.3\textwidth}
+      \includegraphics[width=0.45\textwidth]{Chapters/Figures/Ch2_UltrasoundFundamentals/horiz_pillar_piezo.pdf}
+      \label{fig:ch2_h_pillar}
+  \end{subfigure}
+
+  \caption{Creating subfigures in \LaTeX.}
+  \label{fig:ch2_bvd_model_and_transducer_types}
+\end{figure}
+
+
+
+\begin{equation}
+  Q = f_0 / BW
+  \label{eq:q_factor}
+\end{equation}
 
 
 
 \section{Therapeutic \& Diagnostic Ultrasound}
 \label{sec:ultrasound_imaging}
 
-The pressure generated at the surface of the elements depends on the amplitude of the applied pulse, and the transmit efficiency (expressed in Pa/V) of the transducer. In the case of focused transmission, the pulses are timed by the transmit beamformer such that the gen- erated acoustic waves converge at the desired focal point. The pressure at this focal point can then be found by taking into account the TX beamforming gain and the propagation attenuation in the medium. 
+The pressure generated at the surface of the elements depends on the 
+amplitude of the applied pulse, and the transmit efficiency (expressed in Pa/V) 
+of the transducer. In the case of focused transmission, the pulses are timed by 
+the transmit beamformer such that the gen- erated acoustic waves converge at the 
+desired focal point. The pressure at this focal point can then be found by taking 
+into account the TX beamforming gain and the propagation attenuation in the medium. 
 
-The acoustic wave will reflect from interfaces between regions with different acoustic impedance in the medium, leading to echoes that return to the transducer. The amplitude of an echo depends on the reflection coefficient associated with the interface, and the geometrical spreading and atten- uation that the echo experiences as it travels back to the transducer. The resulting surface pressure at one of the elements then translates to a voltage through the trans- ducer’s receive sensitivity (expressed in V/Pa). This signal is amplified by the LNA and TGC and digitized, and finally combined with the signals from other elements by the receive beamformer. Upon performing delay-and-sum (DAS), the correlated signals from the different channels add up constructively, while uncorrelated noise does not, giving an RX beamforming gain and leading to the creation of a pressure profile through time, leading to the reconstruction of an US B-mode image upon quadrature-filtering and log-compression of the beamformed RX US signals.
+The acoustic wave will reflect from interfaces between regions with different 
+acoustic impedance in the medium, leading to echoes that return to the transducer. 
+The amplitude of an echo depends on the reflection coefficient associated with the 
+interface, and the geometrical spreading and atten- uation that the echo experiences 
+as it travels back to the transducer. The resulting surface pressure at one of the 
+elements then translates to a voltage through the trans- ducer’s receive sensitivity 
+(expressed in V/Pa). This signal is amplified by the LNA and TGC and digitized, and 
+finally combined with the signals from other elements by the receive beamformer. 
+Upon performing delay-and-sum (DAS), the correlated signals from the different channels 
+add up constructively, while uncorrelated noise does not, giving an RX beamforming gain 
+and leading to the creation of a pressure profile through time, leading to the reconstruction 
+of an US B-mode image upon quadrature-filtering and log-compression of the beamformed RX US 
+signals.
 
 
 
