@@ -34,21 +34,13 @@ in gases. If it is a valid matter state, than sound can propagate in it.
 
 \begin{figure}[ht]
      \centering
-     \begin{subfigure}[h]{0.3\textwidth}
-         \centering
-         \includegraphics[width=0.3\textwidth]{Chapters/Figures/Ch2_UltrasoundFundamentals/sphere.pdf}
-         \caption{$y=x$}
-         \label{fig:ch2_spherical_wave}
-     \end{subfigure}
-     \hfill
-     \begin{subfigure}[h]{0.3\textwidth}
-         \centering
-         \includegraphics[width=0.3\textwidth]{Chapters/Figures/Ch2_UltrasoundFundamentals/planar.pdf}
-         \caption{$y=3\sin x$}
-         \label{fig:ch2_planar_wave}
-     \end{subfigure}
-        \caption{Three simple graphs}
-        \label{fig:ch2_wavefront}
+     \subfigure[Frame 1]{1.0\linewidth}{
+         \includegraphics[width=0.3\linewidth]{Chapters/Figures/Ch2_UltrasoundFundamentals/sphere.pdf}
+         \label{fig:ch2_spherical_wave}}
+     \subfigure[Frame 2]{1.0\linewidth}{
+         \includegraphics[width=0.3\linewidth]{Chapters/Figures/Ch2_UltrasoundFundamentals/planar.pdf}
+         \label{fig:ch2_planar_wave}}
+    \caption{Three simple graphs}
 \end{figure}
 
 The two most important wave shapes for the aforementioned imaging and stimulation modalities 
@@ -95,20 +87,20 @@ A velocity \textit{potential} (vectorial field) between any point
 within the medium can be defined for convenience 
 (\ref{eq:ch2_velocity_potential}).
 
-\begin(equation)
+\begin{equation}
   \textbf{v} = \nabla \phi
   \label{eq:ch2_velocity_potential}
 \end{equation}
 
-The pressure $p$ to which any particle is subjected to 
+The pressure $p$ to which any particle is subjected
 is then defined by (\ref{eq:ch2_pressure}).
 
-\begin(equation)
+\begin{equation}
   p = -\rho \frac{\partial \phi}{\partial t}
   \label{eq:ch2_pressure}
 \end{equation}
 
-The generalized wave equation describbing the propagation of sound 
+The generalized wave equation that describes the propagation of sound
 in an incompressible fluid can then be defined through (\ref{eq:ch2_wave_equation}).
 
 \begin{equation}
@@ -130,21 +122,17 @@ orthogonal (Fig. \ref{fig:ch2_transversal} - transversal) axis relative to the s
 
 \begin{figure}[ht]
      \centering
-     \begin{subfigure}[b]{0.3\textwidth}
+     \subfigure{0.3\linewidth}{
          \centering
-         \includegraphics[width=0.3\textwidth]{Chapters/Figures/Ch2_UltrasoundFundamentals/longitudinal_wave.pdf}
-         \caption{$y=x$}
-         \label{fig:ch2_longitudinal}
-     \end{subfigure}
+         \includegraphics[width=0.3\linewidth]{Chapters/Figures/Ch2_UltrasoundFundamentals/longitudinal_wave.pdf}
+         \label{fig:ch2_longitudinal}}
      \hfill
-     \begin{subfigure}[b]{0.3\textwidth}
+     \subfigure{0.3\linewidth}{
          \centering
-         \includegraphics[width=0.3\textwidth]{Chapters/Figures/Ch2_UltrasoundFundamentals/transversal_wave.pdf}
-         \caption{$y=3\sin x$}
-         \label{fig:ch2_transversal}
-     \end{subfigure}
-        \caption{Three simple graphs}
-        \label{fig:ch2_elastic_waves}
+         \includegraphics[width=0.3\linewidth]{Chapters/Figures/Ch2_UltrasoundFundamentals/transversal_wave.pdf}
+         \label{fig:ch2_transversal}}
+    \caption{Three simple graphs}
+    \label{fig:ch2_elastic_waves}
 \end{figure}
 
 \subsection{Characteristic Acoustic Impedance and Elastic Wave Propagation}
@@ -179,20 +167,18 @@ Snell's Law for elastic waves (\ref{eq:ch2_diffraction}).
   \label{eq:ch2_diffraction}
 \end{equation}
 
-\begin{figure}[h]{0.5\textwidth}
-  \begin{subfigure}[b]{0.4\textwidth}
-      \centering
-      \includegraphics[width=0.4\textwidth]{Chapters/Figures/Ch2_UltrasoundFundamentals/reflection_diffraction.pdf}
-      \label{fig:ch2_reflection_diffraction}
-  \end{subfigure}
-  \hfill
-  \begin{subfigure}[b]{0.4\textwidth}
-      \centering
-      \includegraphics[width=0.4\textwidth]{Chapters/Figures/Ch2_UltrasoundFundamentals/impedance_schematic.pdf}
-      \label{fig:ch2_dynamic_range}
-  \end{subfigure}
-     \caption{Three simple graphs}
-     \label{fig:ch2_elastic_waves}
+\begin{figure}[h]
+\centering
+\begin{varwidth}{1.0\linewidth}
+\subfigure{
+    \includegraphics[width=0.45\linewidth]{Chapters/Figures/Ch2_UltrasoundFundamentals/reflection_diffraction.pdf}
+    \label{fig:ch2_reflection_diffraction}}
+\subfigure{
+    \includegraphics[width=0.45\linewidth]{Chapters/Figures/Ch2_UltrasoundFundamentals/impedance_schematic.pdf}
+    \label{fig:ch2_dynamic_range}}
+\end{varwidth}
+\caption{Three simple graphs}
+\label{fig:ch2_elastic_waves}
 \end{figure}
 
 The mismatch (dissimilarity) 
@@ -215,21 +201,18 @@ magnitude, TF will innevitably reduce in magnitude as well by the same proportio
   \label{eq:ch2_transmission_factor}
 \end{equation}
 
-\begin{figure}[h]{1.0\textwidth}
-    \centering
-  \begin{subfigure}[b]{0.4\textwidth}
-      \centering
-      \includegraphics[width=0.4\textwidth]{Chapters/Figures/Ch2_UltrasoundFundamentals/attenuation.pdf}
-      \label{fig:ch2_attenuation}
-  \end{subfigure}
-  \hfill
-  \begin{subfigure}[b]{0.4\textwidth}
-      \centering
-      \includegraphics[width=0.4\textwidth]{Chapters/Figures/Ch2_UltrasoundFundamentals/dynamic_range.pdf}
-      \label{fig:ch2_dynamic_range}
-  \end{subfigure}
-     \caption{Three simple graphs}
-     \label{fig:ch2_elastic_waves}
+\begin{figure}[!ht]
+\centering
+\begin{varwidth}{1.0\linewidth}
+\subfigure{
+    \includegraphics[width=0.45\linewidth]{Chapters/Figures/Ch2_UltrasoundFundamentals/attenuation.pdf}
+    \label{fig:ch2_attenuation}}
+\subfigure{
+    \includegraphics[width=0.45\linewidth]{Chapters/Figures/Ch2_UltrasoundFundamentals/dynamic_range.pdf}
+    \label{fig:ch2_dynamic_range}}
+\end{varwidth}
+\caption{Three simple graphs}
+\label{fig:ch2_elastic_waves}
 \end{figure}
 
 \emph{Attenuation} is the governing phenomena leading to the progressive loss of energy of an elastic wave 
@@ -319,50 +302,98 @@ Such a transformation in analysis-domain greatly simplifies the electrical model
 of the piezoelectric model from a pre-characterization process of its \emph{charge-displacement} 
 system matrix representation \cite{Szabo2014duiioTransducers}. The BVD model includes a resonant 
 branch ($R_m$ , $L_m$ , $C_m$ ) modelling the mechanical resonance of the transducer, and a parasitic capacitor 
-($C_p$ ) representing the electrical losses dampening the resonator branch over time Fig. \ref{fig:ch2_bvd_model}).
+($C_p$ ) representing the electrical losses dampening the resonator branch over time Fig. \ref{fig:ch2_bvd_model}). The electrical impedance characteristic of a simple transducer
+with acoustic loads $Z_1$ and $Z_2$ on the electrode faces of the piezoelectric material, with a series resonance frequency $\omega_1$ and a parallel antiresonance frequency $\omega_0$ can be described using Eqs. (\ref{eq:ch2_clamp_capacitance})-(\ref{eq:ch2_series_resistor}).
 
-\begin{figure}
-  \centering
-  \begin{subfigure}[][][t]{0.3\textwidth}
-      \includegraphics[width=0.45\textwidth]{Chapters/Figures/Ch2_UltrasoundFundamentals/bvd_model.pdf}
+
+\begin{figure}[!ht]
+\centering
+\begin{varwidth}{1.0\linewidth}
+    \subfigure{
+      \includegraphics[width=0.5\linewidth]{Chapters/Figures/Ch2_UltrasoundFundamentals/bvd_model.pdf}
       \label{fig:ch2_bvd_model}
-  \end{subfigure}
+    }
+\end{varwidth}
+\begin{varwidth}{1.0\linewidth}
   %\hfill
-  \begin{subfigure}[][][t]{0.3\textwidth}
-      \includegraphics[width=0.45\textwidth]{Chapters/Figures/Ch2_UltrasoundFundamentals/planar_piezo.pdf}
+  \subfigure{
+      \includegraphics[width=0.3\linewidth]{Chapters/Figures/Ch2_UltrasoundFundamentals/planar_piezo.pdf}
       \label{fig:ch2_planar}
-  \end{subfigure}
+  }
   %\hfill
-  \begin{subfigure}[][][b]{0.3\textwidth}
-      \includegraphics[width=0.45\textwidth]{Chapters/Figures/Ch2_UltrasoundFundamentals/cilinder_piezo.pdf}
+  \subfigure{
+      \includegraphics[width=0.3\linewidth]{Chapters/Figures/Ch2_UltrasoundFundamentals/cilinder_piezo.pdf}
       \label{fig:ch2_cillinder}
-  \end{subfigure}
+  }
+\end{varwidth}
+\begin{varwidth}{1.0\linewidth}
   %\hfill
-  \begin{subfigure}[][][b]{0.3\textwidth}
-      \includegraphics[width=0.45\textwidth]{Chapters/Figures/Ch2_UltrasoundFundamentals/pillar_piezo.pdf}
+  \subfigure{
+      \includegraphics[width=0.25\linewidth]{Chapters/Figures/Ch2_UltrasoundFundamentals/pillar_piezo.pdf}
       \label{fig:ch2_pillar}
-  \end{subfigure}
+  }
   %\hfill
-  \begin{subfigure}[][][b]{0.3\textwidth}
-      \includegraphics[width=0.45\textwidth]{Chapters/Figures/Ch2_UltrasoundFundamentals/horiz_pillar_piezo.pdf}
+  \subfigure{
+      \includegraphics[width=0.25\linewidth]{Chapters/Figures/Ch2_UltrasoundFundamentals/horiz_pillar_piezo.pdf}
       \label{fig:ch2_h_pillar}
-  \end{subfigure}
-
+  }
+\end{varwidth}
   \caption{Creating subfigures in \LaTeX.}
   \label{fig:ch2_bvd_model_and_transducer_types}
 \end{figure}
 
+\begin{equation}
+  C_p = \varepsilon ^S_{33} \frac{W \cdot L}{h}
+  \label{eq:ch2_clamp_capacitance}
+\end{equation}
 
 
 \begin{equation}
-  Q = f_0 / BW
-  \label{eq:q_factor}
+  C_m = C_p \frac{8 \ k_T^2 / \pi^2 }{1 - 8 \ k_T^2 / \pi^2 }
+  \label{eq:ch2_series_cap}
 \end{equation}
+
+\begin{equation}
+  L_m = \frac{1} {\omega_1^2 \ C_m}
+  \label{eq:ch2_series_inductor}
+\end{equation}
+
+\begin{equation}
+  R_m = \frac{\pi \left(Z_1 + Z_2 \right)}{4 \ k_T ^2 \omega_1 C_p Z_c}
+  \label{eq:ch2_series_resistor}
+\end{equation}
+
+The equivalent lumped element circuit of the ultrasound transducer (Fig. \ref{fig:ch2_bvd_model}) 
+
+\begin{equation}
+  X_p = -j \ \frac{1}{\omega C_p}
+  \label{eq:ch2_lossy_reactance}
+\end{equation}
+
+\begin{equation}
+  Z_m = R_m + j \omega Lm - j \frac{1}{\omega C_m} = R_m + j \frac{\omega^2 L_m C_m - 1}{\omega C_m}
+  \label{eq:ch2_series_impedance}
+\end{equation}
+
+When the LC tank oscillates at a resonant tone $\omega_2$ the series branch of the BVD model only features an impedance equivalent to $R_m$ ( $Im(Z_m) = 0 \longrightarrow Z_m = R_m \ \Ohmega, \ \omega_2 = \sqrt{1/ \ L_m C_m} \ [rad \ s^{-1}]$ ) (\ref{eq:ch2_series_impedance}). In this 
+region, the magnitude of the equivalent output impedance of the transducer $Z_T$ collapses towards $R_m$, in parallel with a much higher impedance branch with a reactance $X_p$ ($R_m << |X_p| \longrightarrow |Z_T| \equiv  R_m$) (\ref{eq:ch2_output_equiv_impedance}, \ref{eq:ch2_lossy_reactance}). In high-frequency US diagnostic applications, the transducer's equivalent output impedance can become purely resistive.
+
+\begin{equation}
+  Z_T = X_p \parallel Z_m 
+  \label{eq:ch2_output_equiv_impedance}
+\end{equation}
+
+In anti-resonance ($\omega_1$), on the other hand, the LC tank in the series branch enters an open-circuit regime, blocking all electrical current flowing in it. In this region of the spectrum the equivalent output impedance of the transducer rises towards the reactance of the electrical losses parallel branch ($|X_p| << |Z_m| \equiv \infty \longrightarrow |Z_T| \equiv |X_p|$), becoming purely capacitive. 
 
 
 
 \section{Therapeutic \& Diagnostic Ultrasound}
 \label{sec:ultrasound_imaging}
+
+\begin{equation}
+  Q = f_0 / BW
+  \label{eq:q_factor}
+\end{equation}
 
 The pressure generated at the surface of the elements depends on the 
 amplitude of the applied pulse, and the transmit efficiency (expressed in Pa/V) 
